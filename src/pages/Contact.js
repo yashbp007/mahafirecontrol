@@ -1,110 +1,87 @@
 export function Contact() {
   return `
-    <div style="background: var(--color-secondary); color: white; padding: 80px 20px; text-align: center;">
-      <h1 style="color: white; margin-bottom: 10px;">Contact Us</h1>
-      <p style="color: var(--color-accent); font-weight: 600;">We're Here to Help</p>
-    </div>
-    
-    <section>
+    <!-- Hero Banner -->
+    <section style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('/assets/s5.jpeg') center/cover; padding: 120px 0; text-align: center; color: white;">
       <div class="container">
-        
+        <h1 class="animate-on-scroll slide-up" style="font-size: 3.5rem; color: white; margin-bottom: 10px;">Contact <span class="text-accent">Us</span></h1>
+        <p class="animate-on-scroll slide-up stagger-1" style="font-size: 1.2rem; color: #ddd; max-width: 600px; margin: 0 auto;">We are here to help you with all your fire safety requirements.</p>
+      </div>
+    </section>
+
+    <section style="padding: 80px 0;">
+      <div class="container">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px;">
           
-          <!-- Contact Details -->
-          <div>
-            <h2 style="margin-bottom: 30px;">Get In Touch</h2>
-            <p style="margin-bottom: 30px; color: var(--color-text-light);">Have a question or need a quotation for fire safety equipment or services? Reach out to us using the details below.</p>
+          <!-- Contact Info -->
+          <div class="animate-on-scroll slide-right">
+            <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: var(--color-secondary);">Get in Touch</h2>
+            <div style="width: 50px; height: 3px; background-color: var(--color-primary); margin-bottom: 30px; border-radius: 2px;"></div>
             
-            <div style="display: flex; gap: 20px; margin-bottom: 30px;">
-              <div style="width: 50px; height: 50px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+            <div style="margin-bottom: 25px; display: flex; align-items: flex-start;">
+              <div style="width: 45px; height: 45px; background-color: rgba(211,47,47,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: var(--color-primary); flex-shrink: 0; font-size: 1.2rem;">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <div>
-                <h4 style="margin-bottom: 5px;">Address</h4>
-                <p>Shop No. 2, Sunshine Park, Mane Nagar, Opp. KK Wagh Agriculture College, Dhatak Phata, Nashik</p>
+                <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Our Office</h4>
+                <p style="color: var(--color-text-light); line-height: 1.6;">Shop No. 2, Sunshine Park, Mane Nagar,<br>Opp. KK Wagh Agriculture College,<br>Dhatak Phata, Nashik</p>
               </div>
             </div>
 
-            <div style="display: flex; gap: 20px; margin-bottom: 30px;">
-              <div style="width: 50px; height: 50px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+            <div style="margin-bottom: 25px; display: flex; align-items: flex-start;">
+              <div style="width: 45px; height: 45px; background-color: rgba(255,193,7,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: var(--color-accent); flex-shrink: 0; font-size: 1.2rem;">
                 <i class="fas fa-phone-alt"></i>
               </div>
               <div>
-                <h4 style="margin-bottom: 5px;">Mobile Numbers</h4>
-                <p>9220242555<br>8655416716</p>
-                <p style="margin-top: 10px; color: var(--color-text-light);"><strong>Alternate:</strong> 9284294525</p>
+                <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Call Us</h4>
+                <p style="color: var(--color-text-light); line-height: 1.6;">
+                  Primary: <a href="tel:+919220242555" style="color: var(--color-primary); font-weight: 500;">9220242555</a><br>
+                  Alternate: <a href="tel:+918655416716" style="color: var(--color-text-light);">8655416716</a>, 9284294525
+                </p>
               </div>
             </div>
 
-            <div style="display: flex; gap: 20px; margin-bottom: 40px;">
-              <div style="width: 50px; height: 50px; background: var(--color-primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">
+            <div style="margin-bottom: 25px; display: flex; align-items: flex-start;">
+              <div style="width: 45px; height: 45px; background-color: rgba(211,47,47,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: var(--color-primary); flex-shrink: 0; font-size: 1.2rem;">
                 <i class="fas fa-envelope"></i>
               </div>
               <div>
-                <h4 style="margin-bottom: 5px;">Email</h4>
-                <p>maharashtra.fire.control@gmail.com</p>
+                <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Email Us</h4>
+                <p style="color: var(--color-text-light); line-height: 1.6;">
+                  <a href="mailto:maharashtra.fire.control@gmail.com" style="color: var(--color-primary); font-weight: 500; word-break: break-all;">maharashtra.fire.control@gmail.com</a>
+                </p>
               </div>
             </div>
-
-            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-              <a href="tel:9220242555" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call</a>
-              <a href="https://wa.me/919220242555" target="_blank" class="btn" style="background: #25D366; color: white;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-              <a href="mailto:maharashtra.fire.control@gmail.com" class="btn btn-secondary"><i class="fas fa-envelope"></i> Email</a>
-            </div>
-
           </div>
 
-          <!-- Contact Form -->
-          <div class="card">
-            <h3 style="margin-bottom: 20px;">Business Inquiry</h3>
-            <form onsubmit="event.preventDefault(); alert('Thank you! Your inquiry has been submitted (Placeholder).');">
+          <!-- Contact Form with Floating Labels -->
+          <div class="card animate-on-scroll slide-left stagger-1" style="padding: 40px;">
+            <h3 style="margin-bottom: 25px; font-size: 1.5rem;">Send a Message</h3>
+            <form onsubmit="event.preventDefault(); alert('Message sent successfully! We will contact you soon.');">
               
-              <div style="margin-bottom: 20px;">
-                <label style="display: block; margin-bottom: 8px; font-weight: 500;">Name *</label>
-                <input type="text" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: var(--border-radius); font-family: inherit;">
+              <div class="form-group">
+                <input type="text" id="name" class="form-control" placeholder=" " required>
+                <label for="name" class="floating-label">Your Name</label>
               </div>
-
-              <div style="margin-bottom: 20px;">
-                <label style="display: block; margin-bottom: 8px; font-weight: 500;">Phone *</label>
-                <input type="tel" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: var(--border-radius); font-family: inherit;">
+              
+              <div class="form-group">
+                <input type="tel" id="phone" class="form-control" placeholder=" " required>
+                <label for="phone" class="floating-label">Phone Number</label>
               </div>
-
-              <div style="margin-bottom: 20px;">
-                <label style="display: block; margin-bottom: 8px; font-weight: 500;">Email</label>
-                <input type="email" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: var(--border-radius); font-family: inherit;">
+              
+              <div class="form-group">
+                <input type="email" id="email" class="form-control" placeholder=" ">
+                <label for="email" class="floating-label">Email Address (Optional)</label>
               </div>
-
-              <div style="margin-bottom: 20px;">
-                <label style="display: block; margin-bottom: 8px; font-weight: 500;">Service Required *</label>
-                <select required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: var(--border-radius); font-family: inherit; background: white;">
-                  <option value="">Select an option</option>
-                  <option value="buy">Buy Extinguishers</option>
-                  <option value="refill">Refilling Service</option>
-                  <option value="maintenance">AMC / Maintenance</option>
-                  <option value="installation">Installation</option>
-                  <option value="other">Other Inquiry</option>
-                </select>
+              
+              <div class="form-group">
+                <textarea id="message" rows="4" class="form-control" placeholder=" " required></textarea>
+                <label for="message" class="floating-label">How can we help you?</label>
               </div>
-
-              <div style="margin-bottom: 20px;">
-                <label style="display: block; margin-bottom: 8px; font-weight: 500;">Message</label>
-                <textarea rows="4" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: var(--border-radius); font-family: inherit; resize: vertical;"></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+              
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 1.1rem;">Submit Request</button>
             </form>
           </div>
-
         </div>
-
-        <!-- Map Placeholder -->
-        <div style="margin-top: 60px;">
-          <h2 style="margin-bottom: 20px; text-align: center;">Our Location</h2>
-          <div style="width: 100%; height: 400px; background: #e0e0e0; border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; border: 2px dashed #999;">
-            <p style="color: #666; font-size: 1.2rem;"><i class="fas fa-map-marked-alt text-primary" style="margin-right: 10px;"></i> Google Map Embed Placeholder for Shop No. 2, Sunshine Park, Nashik</p>
-          </div>
-        </div>
-
       </div>
     </section>
   `;

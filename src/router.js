@@ -7,7 +7,7 @@ import { Reviews } from './pages/Reviews.js';
 import { Gallery } from './pages/Gallery.js';
 import { GovtGR } from './pages/GovtGR.js';
 import { Contact } from './pages/Contact.js';
-
+import { initAnimations } from './animations.js';
 const routes = {
   '/': Home,
   '/about': About,
@@ -32,9 +32,6 @@ export function setupRouter() {
       path = '/';
     }
 
-    // Scroll to top on route change
-    window.scrollTo(0, 0);
-
     // Update active nav link
     navLinks.forEach(link => {
       link.classList.remove('active');
@@ -43,16 +40,25 @@ export function setupRouter() {
       }
     });
 
-    // Animate enter
-    contentDiv.classList.remove('page-enter');
-    // small delay to restart animation
+    // Fade out
+    contentDiv.style.opacity = '0';
+    contentDiv.style.transition = 'opacity 0.25s ease';
+    
     setTimeout(() => {
+      // Inject content
       contentDiv.innerHTML = routes[path]();
-      contentDiv.classList.add('page-enter');
       
-      // if page has an init function, we could call it here if we exported objects
-      // but since we are just returning strings for now, it's fine.
-    }, 10);
+      // Scroll to top
+      window.scrollTo(0, 0);
+      
+      // Initialize scroll animations for the new content
+      initAnimations();
+
+      // Fade in
+      requestAnimationFrame(() => {
+        contentDiv.style.opacity = '1';
+      });
+    }, 250);
   };
 
   window.addEventListener('hashchange', render);

@@ -1,60 +1,69 @@
 export function About() {
   return `
-    <div style="background: var(--color-secondary); color: white; padding: 80px 20px; text-align: center;">
-      <h1 style="color: white; margin-bottom: 10px;">About Us</h1>
-      <p style="color: var(--color-accent); font-weight: 600;">Maharashtra Fire Control</p>
-    </div>
-    
-    <section>
+    <!-- Hero Banner -->
+    <section style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/assets/s2.jpeg') center/cover; padding: 120px 0; text-align: center; color: white;">
       <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; align-items: center;">
-          <div>
-            <img src="/assets/logoFinal.png" alt="Maharashtra Fire Control Logo" style="width: 100%; max-width: 400px; display: block; margin: 0 auto; border-radius: var(--border-radius); box-shadow: var(--shadow-md);">
+        <h1 class="animate-on-scroll slide-up" style="font-size: 3.5rem; color: white; margin-bottom: 10px;">About <span class="text-primary">Us</span></h1>
+        <p class="animate-on-scroll slide-up stagger-1" style="font-size: 1.2rem; color: #ddd; max-width: 600px; margin: 0 auto;">Dedicated to providing world-class fire safety solutions and keeping our community safe.</p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section style="padding: 80px 0;">
+      <div class="container">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
+          <div style="flex: 1; min-width: 250px;" class="animate-on-scroll slide-right">
+            <img src="/assets/s5.jpeg" alt="Fire Safety Experts" style="width: 100%; height: 500px; object-fit: cover; border-radius: 16px; box-shadow: var(--shadow-lg);">
           </div>
-          <div>
-            <h2 style="margin-bottom: 20px;">Your Trusted Fire Safety Partner</h2>
-            <p style="margin-bottom: 15px; font-size: 1.1rem; line-height: 1.8;">
-              Based in Nashik, <strong>Maharashtra Fire Control</strong> is a premier provider of comprehensive fire safety solutions. We specialize in supplying high-quality fire safety products, equipment, and providing top-notch maintenance and refilling services.
+          <div style="flex: 1; min-width: 250px;" class="animate-on-scroll slide-left stagger-1">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--color-secondary);">Our <span class="text-primary">Mission</span></h2>
+            <div style="width: 60px; height: 4px; background-color: var(--color-primary); margin-bottom: 30px; border-radius: 2px;"></div>
+            <p style="font-size: 1.1rem; color: var(--color-text-light); margin-bottom: 20px;">
+              Maharashtra Fire Control was established with a singular mission: to protect lives and property through uncompromising quality in fire safety equipment and services.
             </p>
-            <p style="margin-bottom: 15px; font-size: 1.1rem; line-height: 1.8;">
-              Whether you are a residential building, a commercial complex, or an industrial facility, we bring expertise in <strong>fire protection support, installation, and compliance guidance</strong>. Our team of trained professionals ensures that your premises meet all safety regulations and are prepared for any emergency.
+            <p style="font-size: 1.1rem; color: var(--color-text-light); margin-bottom: 30px;">
+              With years of experience in Nashik, we have become the trusted partner for residential complexes, commercial buildings, and industrial facilities, ensuring they meet the highest safety standards.
             </p>
-            <p style="font-size: 1.1rem; line-height: 1.8;">
-              We pride ourselves on our core values: <strong>Reliability, Safety Compliance, Customer Service, and Quality Products</strong>.
-            </p>
-            
-            <div style="margin-top: 30px; display: flex; gap: 15px;">
-              <a href="#/contact" class="btn btn-primary">Contact Us Today</a>
-              <a href="#/certification" class="btn btn-outline">View Certifications</a>
-            </div>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 15px; display: flex; align-items: center; font-weight: 500;">
+                <div style="width: 30px; height: 30px; background-color: rgba(211, 47, 47, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: var(--color-primary);">
+                  <i class="fas fa-check"></i>
+                </div>
+                Government Approved (MH18125813)
+              </li>
+              <li style="margin-bottom: 15px; display: flex; align-items: center; font-weight: 500;">
+                <div style="width: 30px; height: 30px; background-color: rgba(211, 47, 47, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: var(--color-primary);">
+                  <i class="fas fa-check"></i>
+                </div>
+                FSAI Registered
+              </li>
+              <li style="display: flex; align-items: center; font-weight: 500;">
+                <div style="width: 30px; height: 30px; background-color: rgba(211, 47, 47, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: var(--color-primary);">
+                  <i class="fas fa-check"></i>
+                </div>
+                24/7 Emergency Support
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section style="background: var(--color-bg);">
+    <!-- Stats Section -->
+    <section style="background-color: var(--color-secondary); color: white; padding: 60px 0;">
       <div class="container">
-        <h2 class="section-title text-center">Our Core Values</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
-          <div class="card">
-            <i class="fas fa-shield-alt fa-3x text-primary" style="margin-bottom: 15px;"></i>
-            <h3>Reliability</h3>
-            <p style="margin-top: 10px; color: var(--color-text-light);">Dependable products and services when you need them most.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center;">
+          <div class="animate-on-scroll slide-up">
+            <h3 style="font-size: 3rem; color: var(--color-accent); margin-bottom: 10px;">10+</h3>
+            <p style="font-size: 1.2rem; font-weight: 500;">Years Experience</p>
           </div>
-          <div class="card">
-            <i class="fas fa-clipboard-check fa-3x text-primary" style="margin-bottom: 15px;"></i>
-            <h3>Safety Compliance</h3>
-            <p style="margin-top: 10px; color: var(--color-text-light);">Strict adherence to IS 15683 and government regulations.</p>
+          <div class="animate-on-scroll slide-up stagger-1">
+            <h3 style="font-size: 3rem; color: var(--color-accent); margin-bottom: 10px;">500+</h3>
+            <p style="font-size: 1.2rem; font-weight: 500;">Happy Clients</p>
           </div>
-          <div class="card">
-            <i class="fas fa-hands-helping fa-3x text-primary" style="margin-bottom: 15px;"></i>
-            <h3>Customer Service</h3>
-            <p style="margin-top: 10px; color: var(--color-text-light);">Dedicated support and timely assistance for all our clients.</p>
-          </div>
-          <div class="card">
-            <i class="fas fa-medal fa-3x text-primary" style="margin-bottom: 15px;"></i>
-            <h3>Quality Products</h3>
-            <p style="margin-top: 10px; color: var(--color-text-light);">We only supply industry-approved, high-grade safety equipment.</p>
+          <div class="animate-on-scroll slide-up stagger-2">
+            <h3 style="font-size: 3rem; color: var(--color-accent); margin-bottom: 10px;">100%</h3>
+            <p style="font-size: 1.2rem; font-weight: 500;">Safety Compliance</p>
           </div>
         </div>
       </div>

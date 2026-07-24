@@ -1,15 +1,15 @@
 export function Services() {
   return `
     <!-- Hero Banner -->
-    <section style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/assets/s6.jpeg') center/cover; padding: 120px 0; text-align: center; color: white;">
+    <section class="hero-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/assets/s6.jpeg') center/cover; text-align: center; color: white;">
       <div class="container">
-        <h1 class="animate-on-scroll slide-up" style="font-size: 3.5rem; color: white; margin-bottom: 10px;">Our <span class="text-primary">Services</span></h1>
-        <p class="animate-on-scroll slide-up stagger-1" style="font-size: 1.2rem; color: #ddd; max-width: 600px; margin: 0 auto;">Comprehensive fire safety solutions tailored to residential, commercial, and industrial needs.</p>
+        <h1 class="animate-on-scroll slide-up hero-title" style="color: white; margin-bottom: 10px;">Our <span class="text-primary">Services</span></h1>
+        <p class="animate-on-scroll slide-up stagger-1 hero-subtitle" style="color: #ddd; max-width: 600px; margin: 0 auto;">Comprehensive fire safety solutions tailored to residential, commercial, and industrial needs.</p>
       </div>
     </section>
 
     <!-- Services Grid -->
-    <section style="padding: 80px 0;">
+    <section class="section-padding">
       <div class="container">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
           
@@ -54,7 +54,7 @@ export function Services() {
     </section>
 
     <!-- Call to Action -->
-    <section class="animate-on-scroll fade-in" style="background-color: var(--color-bg); padding: 80px 0; text-align: center;">
+    <section class="animate-on-scroll fade-in section-padding" style="background-color: var(--color-bg); text-align: center;">
       <div class="container">
         <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Need a custom fire safety plan?</h2>
         <p style="font-size: 1.1rem; color: var(--color-text-light); max-width: 600px; margin: 0 auto 30px;">Contact our experts today for a free consultation and site visit.</p>

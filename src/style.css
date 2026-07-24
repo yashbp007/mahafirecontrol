@@ -300,6 +300,27 @@ footer {
 .stagger-4 { transition-delay: 0.4s; }
 .stagger-5 { transition-delay: 0.5s; }
 
+/* Utility Classes for Responsiveness */
+.hero-banner {
+  padding: 120px 0;
+}
+.hero-title {
+  font-size: 3.5rem;
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+}
+.section-padding {
+  padding: 80px 0;
+}
+.img-responsive {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  max-height: 500px;
+  object-fit: cover;
+}
+
 /* Cards */
 .card {
   background: var(--color-white);
@@ -326,15 +347,19 @@ footer {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     flex-direction: column;
-    padding: 20px 0;
+    padding: 0;
     gap: 15px;
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: clip-path 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-out;
   }
   
   .nav-links.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    max-height: 500px;
+    padding: 20px 0;
+    opacity: 1;
   }
 
   .nav-links li {
@@ -368,6 +393,12 @@ footer {
 
 /* Mobile Specific Adjustments for smaller screens */
 @media (max-width: 768px) {
+  .hero-banner { padding: 60px 0 !important; }
+  .hero-title { font-size: 2.2rem !important; }
+  .hero-subtitle { font-size: 1rem !important; }
+  .section-padding { padding: 40px 0 !important; }
+  .img-responsive { max-height: 250px !important; min-height: 200px !important; }
+
   h1 { font-size: 2rem !important; }
   h2 { font-size: 1.7rem !important; }
   h3 { font-size: 1.4rem !important; }

@@ -1,11 +1,11 @@
 export function Reviews() {
   return `
-    <div style="background: var(--color-secondary); color: white; padding: 80px 20px; text-align: center;">
-      <h1 style="color: white; margin-bottom: 10px;">Happy Customers</h1>
-      <p style="color: var(--color-accent); font-weight: 600;">What Our Clients Say About Us</p>
+    <div class="hero-banner" style="background: var(--color-secondary); color: white; text-align: center;">
+      <h1 class="hero-title" style="color: white; margin-bottom: 10px;">Happy Customers</h1>
+      <p class="hero-subtitle" style="color: var(--color-accent); font-weight: 600;">What Our Clients Say About Us</p>
     </div>
     
-    <section>
+    <section class="section-padding">
       <div class="container">
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 50px;">

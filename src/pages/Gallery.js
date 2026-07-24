@@ -1,14 +1,14 @@
 export function Gallery() {
   return `
     <!-- Hero Banner -->
-    <section style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/assets/s4.jpeg') center/cover; padding: 120px 0; text-align: center; color: white;">
+    <section class="hero-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/assets/s4.jpeg') center/cover; text-align: center; color: white;">
       <div class="container">
-        <h1 class="animate-on-scroll slide-up" style="font-size: 3.5rem; color: white; margin-bottom: 10px;">Our <span class="text-primary">Gallery</span></h1>
-        <p class="animate-on-scroll slide-up stagger-1" style="font-size: 1.2rem; color: #ddd; max-width: 600px; margin: 0 auto;">Take a look at our professional installations and high-quality equipment.</p>
+        <h1 class="animate-on-scroll slide-up hero-title" style="color: white; margin-bottom: 10px;">Our <span class="text-primary">Gallery</span></h1>
+        <p class="animate-on-scroll slide-up stagger-1 hero-subtitle" style="color: #ddd; max-width: 600px; margin: 0 auto;">Take a look at our professional installations and high-quality equipment.</p>
       </div>
     </section>
 
-    <section style="padding: 80px 0;">
+    <section class="section-padding">
       <div class="container">
         <!-- Masonry Grid -->
         <div class="gallery-masonry">

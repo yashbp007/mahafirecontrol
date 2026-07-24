@@ -1,20 +1,20 @@
 export function Products() {
   return `
     <!-- Hero Banner -->
-    <section style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/assets/s3.jpeg') center/cover; padding: 120px 0; text-align: center; color: white;">
+    <section class="hero-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/assets/s3.jpeg') center/cover; text-align: center; color: white;">
       <div class="container">
-        <h1 class="animate-on-scroll slide-up" style="font-size: 3.5rem; color: white; margin-bottom: 10px;">Our <span class="text-primary">Products</span></h1>
-        <p class="animate-on-scroll slide-up stagger-1" style="font-size: 1.2rem; color: #ddd; max-width: 600px; margin: 0 auto;">High-quality, certified fire safety equipment for every environment.</p>
+        <h1 class="animate-on-scroll slide-up hero-title" style="color: white; margin-bottom: 10px;">Our <span class="text-primary">Products</span></h1>
+        <p class="animate-on-scroll slide-up stagger-1 hero-subtitle" style="color: #ddd; max-width: 600px; margin: 0 auto;">High-quality, certified fire safety equipment for every environment.</p>
       </div>
     </section>
 
-    <section style="padding: 80px 0;">
+    <section class="section-padding">
       <div class="container">
         
         <!-- Category 1 -->
-        <div class="animate-on-scroll slide-up" style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px; margin-bottom: 80px;">
+        <div class="animate-on-scroll slide-up" style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px; margin-bottom: 50px;">
           <div style="flex: 1; min-width: 250px;">
-            <img src="/assets/s4.jpeg" alt="ABC Dry Powder" style="width: 100%; height: 350px; object-fit: cover; border-radius: 16px; box-shadow: var(--shadow-lg);">
+            <img src="/assets/s4.jpeg" alt="ABC Dry Powder" class="img-responsive" style="border-radius: 16px; box-shadow: var(--shadow-lg);">
           </div>
           <div style="flex: 1; min-width: 250px;">
             <h2 style="font-size: 2rem; color: var(--color-secondary); margin-bottom: 10px;">ABC Dry Powder (MAP)</h2>
@@ -29,7 +29,7 @@ export function Products() {
         </div>
 
         <!-- Category 2 -->
-        <div class="animate-on-scroll slide-up" style="display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 50px; margin-bottom: 80px;">
+        <div class="animate-on-scroll slide-up" style="display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 50px; margin-bottom: 50px;">
           <div style="flex: 1; min-width: 250px;">
             <h2 style="font-size: 2rem; color: var(--color-secondary); margin-bottom: 10px;">Carbon Dioxide (CO2)</h2>
             <div style="width: 50px; height: 3px; background-color: var(--color-accent); margin-bottom: 20px; border-radius: 2px;"></div>
@@ -41,14 +41,14 @@ export function Products() {
             </ul>
           </div>
           <div style="flex: 1; min-width: 250px;">
-            <img src="/assets/s5.jpeg" alt="CO2 Extinguisher" style="width: 100%; height: 350px; object-fit: cover; border-radius: 16px; box-shadow: var(--shadow-lg);">
+            <img src="/assets/s5.jpeg" alt="CO2 Extinguisher" class="img-responsive" style="border-radius: 16px; box-shadow: var(--shadow-lg);">
           </div>
         </div>
 
         <!-- Category 3 -->
-        <div class="animate-on-scroll slide-up" style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px; margin-bottom: 80px;">
+        <div class="animate-on-scroll slide-up" style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px; margin-bottom: 50px;">
           <div style="flex: 1; min-width: 250px;">
-            <img src="/assets/s1.jpeg" alt="Mechanical Foam" style="width: 100%; height: 350px; object-fit: cover; border-radius: 16px; box-shadow: var(--shadow-lg);">
+            <img src="/assets/s1.jpeg" alt="Mechanical Foam" class="img-responsive" style="border-radius: 16px; box-shadow: var(--shadow-lg);">
           </div>
           <div style="flex: 1; min-width: 250px;">
             <h2 style="font-size: 2rem; color: var(--color-secondary); margin-bottom: 10px;">Mechanical Foam (AFFF)</h2>

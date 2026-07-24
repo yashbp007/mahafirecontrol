@@ -1,19 +1,19 @@
 export function About() {
   return `
     <!-- Hero Banner -->
-    <section style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/assets/s2.jpeg') center/cover; padding: 120px 0; text-align: center; color: white;">
+    <section class="hero-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/assets/s2.jpeg') center/cover; text-align: center; color: white;">
       <div class="container">
-        <h1 class="animate-on-scroll slide-up" style="font-size: 3.5rem; color: white; margin-bottom: 10px;">About <span class="text-primary">Us</span></h1>
-        <p class="animate-on-scroll slide-up stagger-1" style="font-size: 1.2rem; color: #ddd; max-width: 600px; margin: 0 auto;">Dedicated to providing world-class fire safety solutions and keeping our community safe.</p>
+        <h1 class="animate-on-scroll slide-up hero-title" style="color: white; margin-bottom: 10px;">About <span class="text-primary">Us</span></h1>
+        <p class="animate-on-scroll slide-up stagger-1 hero-subtitle" style="color: #ddd; max-width: 600px; margin: 0 auto;">Dedicated to providing world-class fire safety solutions and keeping our community safe.</p>
       </div>
     </section>
 
     <!-- Main Content -->
-    <section style="padding: 80px 0;">
+    <section class="section-padding">
       <div class="container">
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
           <div style="flex: 1; min-width: 250px;" class="animate-on-scroll slide-right">
-            <img src="/assets/s5.jpeg" alt="Fire Safety Experts" style="width: 100%; height: 500px; object-fit: cover; border-radius: 16px; box-shadow: var(--shadow-lg);">
+            <img src="/assets/s5.jpeg" alt="Fire Safety Experts" class="img-responsive" style="border-radius: 16px; box-shadow: var(--shadow-lg);">
           </div>
           <div style="flex: 1; min-width: 250px;" class="animate-on-scroll slide-left stagger-1">
             <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--color-secondary);">Our <span class="text-primary">Mission</span></h2>
@@ -50,7 +50,7 @@ export function About() {
     </section>
 
     <!-- Stats Section -->
-    <section style="background-color: var(--color-secondary); color: white; padding: 60px 0;">
+    <section class="section-padding" style="background-color: var(--color-secondary); color: white;">
       <div class="container">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center;">
           <div class="animate-on-scroll slide-up">

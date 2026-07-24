@@ -1,10 +1,10 @@
 export function Home() {
   return `
-    <div class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('/assets/hero_bg.png') center/cover; padding: 120px 20px; text-align: center; color: white; display: flex; align-items: center; justify-content: center; min-height: 85vh;">
-      <div class="animate-on-scroll fade-in" style="background: rgba(15, 15, 15, 0.65); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.15); padding: 60px 40px; border-radius: 20px; max-width: 950px; box-shadow: 0 30px 60px rgba(0,0,0,0.6);">
-        <img src="/assets/logoFinal-removebg-preview.png" alt="Maharashtra Fire Control" style="height: 140px; margin-bottom: 25px; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" class="animate-on-scroll slide-up">
-        <h1 class="animate-on-scroll slide-up stagger-1" style="color: white; font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-weight: 800; letter-spacing: -1px;">Maharashtra Fire Control</h1>
-        <p class="animate-on-scroll slide-up stagger-2" style="font-size: clamp(1.2rem, 3vw, 1.8rem); color: var(--color-accent); font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px;">Safety First</p>
+    <div class="hero hero-banner" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('/assets/hero_bg.png') center/cover; text-align: center; color: white; display: flex; align-items: center; justify-content: center; min-height: 85vh;">
+      <div class="animate-on-scroll fade-in" style="background: rgba(15, 15, 15, 0.65); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.15); padding: 60px 40px; border-radius: 20px; max-width: 950px; box-shadow: 0 30px 60px rgba(0,0,0,0.6); margin: 0 auto;">
+        <img src="/assets/logoFinal-removebg-preview.png" alt="Maharashtra Fire Control" style="height: 140px; max-width: 100%; object-fit: contain; margin-bottom: 25px; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);" class="animate-on-scroll slide-up">
+        <h1 class="animate-on-scroll slide-up stagger-1 hero-title" style="color: white; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-weight: 800; letter-spacing: -1px;">Maharashtra Fire Control</h1>
+        <p class="animate-on-scroll slide-up stagger-2 hero-subtitle" style="color: var(--color-accent); font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px;">Safety First</p>
         <h2 style="color: white; margin-bottom: 25px; font-weight: 400; font-size: clamp(1.1rem, 2.5vw, 1.5rem);">Reliable Fire Safety Solutions in Nashik</h2>
         <p style="max-width: 700px; margin: 0 auto 40px; font-size: 1.15rem; line-height: 1.8; color: #E0E0E0;">
           Your trusted partner for fire safety equipment, refilling, maintenance, installation, inspection, and compliance support. We serve residential, commercial, industrial, and government clients with top-tier safety standards.
@@ -18,7 +18,7 @@ export function Home() {
     </div>
 
     <!-- Quick Navigation -->
-    <section style="background-color: var(--color-bg); padding: 60px 0;">
+    <section class="section-padding" style="background-color: var(--color-bg);">
       <div class="container">
         <h2 class="section-title animate-on-scroll slide-up">Quick Links</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
@@ -74,11 +74,11 @@ export function Home() {
     </section>
 
     <!-- Why Choose Us -->
-    <section style="padding: 80px 0;">
+    <section class="section-padding">
       <div class="container">
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
           <div class="animate-on-scroll slide-right" style="flex: 1; min-width: 250px;">
-            <img src="/assets/why_choose_us.png" alt="Fire Safety Professional" style="width: 100%; height: 450px; object-fit: cover; border-radius: 16px; box-shadow: var(--shadow-lg);">
+            <img src="/assets/why_choose_us.png" alt="Fire Safety Professional" class="img-responsive" style="border-radius: 16px; box-shadow: var(--shadow-lg);">
           </div>
           <div class="animate-on-scroll slide-left stagger-1" style="flex: 1; min-width: 250px;">
             <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--color-secondary);">Why Choose <span class="text-primary">Us?</span></h2>

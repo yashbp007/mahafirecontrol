@@ -23,6 +23,8 @@ const routes = {
 export function setupRouter() {
   const contentDiv = document.getElementById('app-content');
   const navLinks = document.querySelectorAll('.nav-links a');
+  const navbarContainer = document.getElementById('navbar-container');
+  const footerContainer = document.getElementById('footer-container');
 
   const render = () => {
     let path = window.location.hash.slice(1) || '/';
@@ -30,6 +32,15 @@ export function setupRouter() {
     // Fallback to home if route not found
     if (!routes[path]) {
       path = '/';
+    }
+
+    // Hide navbar and footer on the home page
+    if (path === '/') {
+      if (navbarContainer) navbarContainer.style.display = 'none';
+      if (footerContainer) footerContainer.style.display = 'none';
+    } else {
+      if (navbarContainer) navbarContainer.style.display = 'block';
+      if (footerContainer) footerContainer.style.display = 'block';
     }
 
     // Update active nav link

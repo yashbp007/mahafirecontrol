@@ -1,7 +1,7 @@
 export function Products() {
   return `
     <!-- Hero Banner -->
-    <section class="hero-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('/assets/s3.jpeg') center/cover; text-align: center; color: white;">
+    <section class="hero-banner" style="background: var(--color-secondary); text-align: center; color: white;">
       <div class="container">
         <h1 class="animate-on-scroll slide-up hero-title" style="color: white; margin-bottom: 10px;">Our <span class="text-primary">Products</span></h1>
         <p class="animate-on-scroll slide-up stagger-1 hero-subtitle" style="color: #ddd; max-width: 600px; margin: 0 auto;">High-quality, certified fire safety equipment for every environment.</p>

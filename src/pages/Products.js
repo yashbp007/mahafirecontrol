@@ -104,44 +104,6 @@ export function Products() {
 
         </div>
 
-        <!-- Additional Fire Safety Accessories & Systems Grid -->
-        <div style="margin-top: 70px;" class="animate-on-scroll slide-up">
-          <div style="text-align: center; margin-bottom: 40px;">
-            <h2 style="font-size: 2.2rem; color: var(--color-secondary); margin-bottom: 10px;">
-              Fire Protection <span class="text-accent">Accessories & Systems</span>
-            </h2>
-            <div style="width: 60px; height: 4px; background-color: var(--color-accent); margin: 0 auto; border-radius: 2px;"></div>
-          </div>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
-            
-            <div class="card animate-on-scroll slide-up" style="padding: 25px; border-radius: 12px;">
-              <div style="background: white; border-radius: 8px; padding: 15px; text-align: center; margin-bottom: 15px; border: 1px solid #eee; height: 180px; display: flex; align-items: center; justify-content: center;" onclick="openLightbox('/assets/s2.jpeg')">
-                <img src="/assets/s2.jpeg" alt="Fire Hydrants & Hoses" style="max-height: 100%; max-width: 100%; object-fit: contain; cursor: pointer;">
-              </div>
-              <h4 style="font-size: 1.2rem; margin-bottom: 8px;">Fire Hydrant Systems</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-light); line-height: 1.6;">Landing valves, fire hose reels, branch pipes, and underground hydrant valves.</p>
-            </div>
-
-            <div class="card animate-on-scroll slide-up stagger-1" style="padding: 25px; border-radius: 12px;">
-              <div style="background: white; border-radius: 8px; padding: 15px; text-align: center; margin-bottom: 15px; border: 1px solid #eee; height: 180px; display: flex; align-items: center; justify-content: center;" onclick="openLightbox('/assets/s3.jpeg')">
-                <img src="/assets/s3.jpeg" alt="Fire Detection Alarms" style="max-height: 100%; max-width: 100%; object-fit: contain; cursor: pointer;">
-              </div>
-              <h4 style="font-size: 1.2rem; margin-bottom: 8px;">Fire Alarm Systems</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-light); line-height: 1.6;">Smoke detectors, heat sensors, manual call points, and electronic hooters.</p>
-            </div>
-
-            <div class="card animate-on-scroll slide-up stagger-2" style="padding: 25px; border-radius: 12px;">
-              <div style="background: white; border-radius: 8px; padding: 15px; text-align: center; margin-bottom: 15px; border: 1px solid #eee; height: 180px; display: flex; align-items: center; justify-content: center;" onclick="openLightbox('/assets/s6.jpeg')">
-                <img src="/assets/s6.jpeg" alt="Safety Signage & Gear" style="max-height: 100%; max-width: 100%; object-fit: contain; cursor: pointer;">
-              </div>
-              <h4 style="font-size: 1.2rem; margin-bottom: 8px;">Safety Signage & Gear</h4>
-              <p style="font-size: 0.9rem; color: var(--color-text-light); line-height: 1.6;">Photoluminescent (glow-in-dark) exit signs, fire buckets, and safety suits.</p>
-            </div>
-
-          </div>
-        </div>
-
       </div>
     </section>
 

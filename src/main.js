@@ -50,6 +50,27 @@ window.closeLightbox = function() {
   }
 };
 
+// Protected PDF Viewer Modal Handlers (View Only, Toolbar Disabled)
+window.openPdfModal = function(pdfSrc, title) {
+  const modal = document.getElementById('pdf-modal');
+  const iframe = document.getElementById('pdf-frame');
+  const titleEl = document.getElementById('pdf-modal-title');
+  if (modal && iframe) {
+    iframe.src = `${pdfSrc}#toolbar=0&navpanes=0&scrollbar=0`;
+    if (titleEl) titleEl.innerText = title || 'Document Preview';
+    modal.classList.add('active');
+  }
+};
+
+window.closePdfModal = function() {
+  const modal = document.getElementById('pdf-modal');
+  const iframe = document.getElementById('pdf-frame');
+  if (modal) {
+    modal.classList.remove('active');
+    if (iframe) iframe.src = '';
+  }
+};
+
 // WhatsApp Form Redirection Handlers
 window.sendContactWhatsApp = function(e) {
   e.preventDefault();

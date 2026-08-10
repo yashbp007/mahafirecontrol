@@ -27,12 +27,9 @@ export function GovtGR() {
               </div>
 
               <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                <a href="/assets/Latest_GR.pdf" target="_blank" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 8px;">
-                  <i class="fas fa-eye"></i> View PDF
-                </a>
-                <a href="/assets/Latest_GR.pdf" download="Latest_GR_Maharashtra_Fire_Safety.pdf" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-                  <i class="fas fa-download"></i> Download PDF
-                </a>
+                <button onclick="openPdfModal('/assets/Latest_GR.pdf', 'Latest Government Resolution (GR)')" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer;">
+                  <i class="fas fa-eye"></i> View Official GR
+                </button>
               </div>
             </div>
 
@@ -49,10 +46,8 @@ export function GovtGR() {
             <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--color-secondary); display: flex; align-items: center; justify-content: center; gap: 10px;">
               <i class="fas fa-file-pdf text-primary"></i> Official Document PDF Preview
             </h3>
-            <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid #ddd; background: #525659; height: 600px; width: 100%;">
-              <iframe src="/assets/Latest_GR.pdf" width="100%" height="100%" style="border: none;">
-                This browser does not support inline PDFs. Please download the PDF to view it: <a href="/assets/Latest_GR.pdf">Download PDF</a>
-              </iframe>
+            <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid #ddd; background: #525659; height: 600px; width: 100%;" oncontextmenu="return false;">
+              <iframe src="/assets/Latest_GR.pdf#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="100%" style="border: none;"></iframe>
             </div>
           </div>
 
@@ -164,6 +159,19 @@ export function GovtGR() {
 
       </div>
     </section>
+
+    <!-- Protected PDF Viewer Modal (View Only, Toolbar Disabled) -->
+    <div id="pdf-modal" class="pdf-modal" onclick="if(event.target === this) closePdfModal()">
+      <div class="pdf-modal-container">
+        <div class="pdf-modal-header">
+          <h4 id="pdf-modal-title"><i class="fas fa-file-pdf text-primary"></i> Document Preview</h4>
+          <span class="pdf-modal-close" onclick="closePdfModal()">&times;</span>
+        </div>
+        <div class="pdf-modal-body" oncontextmenu="return false;">
+          <iframe id="pdf-frame" src="" title="Document Viewer"></iframe>
+        </div>
+      </div>
+    </div>
 
     <!-- Lightbox Modal for Fullscreen View -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">

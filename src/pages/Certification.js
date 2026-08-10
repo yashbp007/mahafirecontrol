@@ -27,13 +27,10 @@ export function Certification() {
         </div>
       </div>
 
-      <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto;">
-        <a href="${doc.file}" target="_blank" class="btn btn-outline" style="padding: 7px 14px; font-size: 0.85rem; flex: 1; min-width: 100px; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
-          <i class="fas fa-eye"></i> View PDF
-        </a>
-        <a href="${doc.file}" download="${doc.name}" class="btn btn-primary" style="padding: 7px 14px; font-size: 0.85rem; flex: 1; min-width: 100px; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
-          <i class="fas fa-download"></i> Download
-        </a>
+      <div style="margin-top: auto;">
+        <button onclick="openPdfModal('${doc.file}', '${doc.name}')" class="btn btn-primary" style="width: 100%; padding: 10px 14px; font-size: 0.9rem; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 8px; border: none; cursor: pointer;">
+          <i class="fas fa-eye"></i> View PDF Document
+        </button>
       </div>
     </div>
   `).join('');
@@ -108,6 +105,19 @@ export function Certification() {
 
       </div>
     </section>
+
+    <!-- Protected PDF Viewer Modal (View Only, Toolbar Disabled) -->
+    <div id="pdf-modal" class="pdf-modal" onclick="if(event.target === this) closePdfModal()">
+      <div class="pdf-modal-container">
+        <div class="pdf-modal-header">
+          <h4 id="pdf-modal-title"><i class="fas fa-file-pdf text-primary"></i> Document Preview</h4>
+          <span class="pdf-modal-close" onclick="closePdfModal()">&times;</span>
+        </div>
+        <div class="pdf-modal-body" oncontextmenu="return false;">
+          <iframe id="pdf-frame" src="" title="Document Viewer"></iframe>
+        </div>
+      </div>
+    </div>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">

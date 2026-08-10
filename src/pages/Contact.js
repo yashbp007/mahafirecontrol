@@ -55,30 +55,32 @@ export function Contact() {
 
           <!-- Contact Form with Floating Labels -->
           <div class="card animate-on-scroll slide-left stagger-1" style="padding: 40px;">
-            <h3 style="margin-bottom: 25px; font-size: 1.5rem;">Send a Message</h3>
-            <form onsubmit="event.preventDefault(); alert('Message sent successfully! We will contact you soon.');">
+            <h3 style="margin-bottom: 25px; font-size: 1.5rem; color: var(--color-secondary);">Send a Message</h3>
+            <form onsubmit="window.sendContactWhatsApp(event)">
               
               <div class="form-group">
-                <input type="text" id="name" class="form-control" placeholder=" " required>
-                <label for="name" class="floating-label">Your Name</label>
+                <input type="text" id="contact_name" class="form-control" placeholder=" " required>
+                <label for="contact_name" class="floating-label">Your Name</label>
               </div>
               
               <div class="form-group">
-                <input type="tel" id="phone" class="form-control" placeholder=" " required>
-                <label for="phone" class="floating-label">Phone Number</label>
+                <input type="tel" id="contact_phone" class="form-control" placeholder=" " required>
+                <label for="contact_phone" class="floating-label">Phone Number</label>
               </div>
               
               <div class="form-group">
-                <input type="email" id="email" class="form-control" placeholder=" ">
-                <label for="email" class="floating-label">Email Address (Optional)</label>
+                <input type="email" id="contact_email" class="form-control" placeholder=" ">
+                <label for="contact_email" class="floating-label">Email Address (Optional)</label>
               </div>
               
               <div class="form-group">
-                <textarea id="message" rows="4" class="form-control" placeholder=" " required></textarea>
-                <label for="message" class="floating-label">How can we help you?</label>
+                <textarea id="contact_message" rows="4" class="form-control" placeholder=" " required></textarea>
+                <label for="contact_message" class="floating-label">How can we help you?</label>
               </div>
               
-              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 1.1rem;">Submit Request</button>
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1.1rem; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 8px;">
+                <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> Send via WhatsApp
+              </button>
             </form>
           </div>
         </div>

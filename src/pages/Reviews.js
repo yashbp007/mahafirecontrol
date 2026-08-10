@@ -68,10 +68,42 @@ export function Reviews() {
 
         </div>
 
-        <div class="text-center" style="background: var(--color-bg); padding: 40px; border-radius: var(--border-radius);">
-          <h3 style="margin-bottom: 15px;">Leave a Review</h3>
-          <p style="margin-bottom: 20px;">We value your feedback. Let us know how we did!</p>
-          <a href="#/contact" class="btn btn-primary">Contact Us</a>
+        <div class="card animate-on-scroll slide-up" style="max-width: 700px; margin: 50px auto 0; padding: 35px; border-radius: 16px; border-top: 4px solid var(--color-accent);">
+          <h3 style="margin-bottom: 8px; text-align: center; color: var(--color-secondary); font-size: 1.8rem;">Share Your Experience</h3>
+          <p style="text-align: center; color: var(--color-text-light); margin-bottom: 30px;">We value your feedback! Submit your review directly to us on WhatsApp.</p>
+          
+          <form onsubmit="window.sendReviewWhatsApp(event)">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+              <div class="form-group">
+                <input type="text" id="review_name" class="form-control" placeholder=" " required>
+                <label for="review_name" class="floating-label">Your Name</label>
+              </div>
+              <div class="form-group">
+                <input type="text" id="review_role" class="form-control" placeholder=" ">
+                <label for="review_role" class="floating-label">Role / Organization (Optional)</label>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 15px;">
+              <label style="display: block; font-size: 0.9rem; font-weight: 600; color: var(--color-secondary); margin-bottom: 8px;">Select Your Rating</label>
+              <select id="review_rating" class="form-control" style="padding: 12px; height: auto; border-radius: 8px; border: 1px solid #ccc; background: white;">
+                <option value="⭐⭐⭐⭐⭐ (5/5 Stars)">⭐⭐⭐⭐⭐ - Excellent (5/5)</option>
+                <option value="⭐⭐⭐⭐ (4/5 Stars)">⭐⭐⭐⭐ - Very Good (4/5)</option>
+                <option value="⭐⭐⭐ (3/5 Stars)">⭐⭐⭐ - Good (3/5)</option>
+                <option value="⭐⭐ (2/5 Stars)">⭐⭐ - Fair (2/5)</option>
+                <option value="⭐ (1/5 Star)">⭐ - Needs Improvement (1/5)</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-top: 15px;">
+              <textarea id="review_message" rows="4" class="form-control" placeholder=" " required></textarea>
+              <label for="review_message" class="floating-label">Write your feedback or review...</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1.1rem; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 8px; margin-top: 10px;">
+              <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> Submit Review on WhatsApp
+            </button>
+          </form>
         </div>
 
       </div>

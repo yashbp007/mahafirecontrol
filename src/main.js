@@ -50,4 +50,39 @@ window.closeLightbox = function() {
   }
 };
 
+// WhatsApp Form Redirection Handlers
+window.sendContactWhatsApp = function(e) {
+  e.preventDefault();
+  const name = document.getElementById('contact_name')?.value?.trim() || '';
+  const phone = document.getElementById('contact_phone')?.value?.trim() || '';
+  const email = document.getElementById('contact_email')?.value?.trim() || '';
+  const message = document.getElementById('contact_message')?.value?.trim() || '';
+
+  let text = `Hello Maharashtra Fire Control,\n\nI would like to make an inquiry:\n`;
+  text += `👤 *Name:* ${name}\n`;
+  text += `📞 *Phone:* ${phone}\n`;
+  if (email) text += `✉️ *Email:* ${email}\n`;
+  text += `💬 *Message:* ${message}`;
+
+  const whatsappUrl = `https://wa.me/919220242555?text=${encodeURIComponent(text)}`;
+  window.open(whatsappUrl, '_blank');
+};
+
+window.sendReviewWhatsApp = function(e) {
+  e.preventDefault();
+  const name = document.getElementById('review_name')?.value?.trim() || '';
+  const role = document.getElementById('review_role')?.value?.trim() || '';
+  const rating = document.getElementById('review_rating')?.value || '⭐⭐⭐⭐⭐ (5/5)';
+  const message = document.getElementById('review_message')?.value?.trim() || '';
+
+  let text = `Hello Maharashtra Fire Control,\n\nHere is my review:\n`;
+  text += `👤 *Name:* ${name}\n`;
+  if (role) text += `🏢 *Role/Org:* ${role}\n`;
+  text += `⭐ *Rating:* ${rating}\n`;
+  text += `📝 *Review:* ${message}`;
+
+  const whatsappUrl = `https://wa.me/919220242555?text=${encodeURIComponent(text)}`;
+  window.open(whatsappUrl, '_blank');
+};
+
 setupRouter();

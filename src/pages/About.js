@@ -11,46 +11,54 @@ export function About() {
     </section>
 
     <!-- Main Content Section -->
-    <section class="section-padding">
+    <section class="section-padding" style="position: relative; overflow: hidden;">
       <div class="container">
-        <div style="max-width: 900px; margin: 0 auto;" class="animate-on-scroll slide-up">
+        <div style="max-width: 900px; margin: 0 auto; position: relative;" class="animate-on-scroll slide-up">
           
-          <h2 style="font-size: 2.2rem; margin-bottom: 15px; color: var(--color-secondary);">
-            Maharashtra Fire Control –
-          </h2>
-          <div style="width: 60px; height: 4px; background-color: var(--color-primary); margin-bottom: 25px; border-radius: 2px;"></div>
-          
-          <p style="font-size: 1.05rem; color: var(--color-text); line-height: 1.8; margin-bottom: 20px;">
-            Maharashtra Fire Control has been working continuously since 2013 across Maharashtra to create awareness about fire safety and promote effective fire prevention measures. For many years, we have been actively engaged in creating awareness about fire safety among industries, commercial establishments, educational institutions, hospitals, residential complexes, and various public places.
-          </p>
-
-          <p style="font-size: 1.05rem; color: var(--color-text); line-height: 1.8; margin-bottom: 20px;">
-            Fire is not merely a disaster that causes damage to property; it can also pose a serious threat to human life. Therefore, fire prevention, fire control, and an appropriate response during emergency situations are extremely important. With this objective, Maharashtra Fire Control provides fire safety services in accordance with various rules, acts, and guidelines prescribed by the State Government. We provide professional guidance and technical assistance to commercial establishments and organizations for compliance with the Maharashtra Fire Prevention and Life Safety Measures Act and applicable national fire safety standards.
-          </p>
-
-          <p style="font-size: 1.05rem; color: var(--color-text); line-height: 1.8; margin-bottom: 20px;">
-            Our services include Fire Audits, Fire Safety Training, Mock Drills, Emergency Evacuation Training, Inspection and Maintenance of Fire Extinguishers and Fire-Fighting Equipment, Installation of Fire Alarm and Fire-Fighting Systems, as well as guidance required for fire safety certification and compliance.
-          </p>
-
-          <p style="font-size: 1.05rem; color: var(--color-text); line-height: 1.8; margin-bottom: 20px;">
-            Our aim is to provide the best possible fire safety solutions according to the specific requirements of every client. We believe that effective fire safety is not only about having fire-fighting equipment, but also about creating awareness, preparedness, and a culture of safety.
-          </p>
-
-          <div class="card" style="padding: 25px; border-left: 5px solid var(--color-primary); margin: 25px 0; background: var(--color-bg);">
-            <p style="font-size: 1.1rem; color: var(--color-secondary); line-height: 1.8; margin: 0;">
-              The primary objective of Maharashtra Fire Control is <strong>“Protection of Life and Property.”</strong> We are committed to creating awareness about fire safety, utilizing modern technology to develop safer environments, and encouraging every organization and citizen to understand the importance of fire prevention and safety.
-            </p>
+          <!-- Background Logo Watermark -->
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 85%; max-width: 550px; opacity: 0.15; pointer-events: none; z-index: 0; filter: contrast(120%);">
+            <img src="/assets/logoFinal-removebg-preview.png" alt="Maharashtra Fire Control Watermark" style="width: 100%; height: auto; display: block;">
           </div>
 
-          <p style="font-size: 1.05rem; color: var(--color-text); line-height: 1.8; margin-bottom: 0;">
-            Through continuous awareness programs, professional training, technical guidance, and effective fire prevention measures, Maharashtra Fire Control strives to contribute towards building a safer, more aware, and fire-resilient Maharashtra.
-          </p>
+          <div style="position: relative; z-index: 1;">
+            <h2 style="font-size: 2.2rem; margin-bottom: 15px; color: var(--color-secondary);">
+              Maharashtra Fire Control –
+            </h2>
+            <div style="width: 60px; height: 4px; background-color: var(--color-primary); margin-bottom: 25px; border-radius: 2px;"></div>
+            
+            <p style="font-size: 1.05rem; color: var(--color-text); line-height: 1.8; margin-bottom: 20px;">
+              Maharashtra Fire Control has been working continuously since 2013 across Maharashtra to create awareness about fire safety and promote effective fire prevention measures. For many years, we have been actively engaged in creating awareness about fire safety among industries, commercial establishments, educational institutions, hospitals, residential complexes, and various public places.
+            </p>
+
+            <p style="font-size: 1.05rem; color: var(--color-text); line-height: 1.8; margin-bottom: 20px;">
+              Fire is not merely a disaster that causes damage to property; it can also pose a serious threat to human life. Therefore, fire prevention, fire control, and an appropriate response during emergency situations are extremely important. With this objective, Maharashtra Fire Control provides fire safety services in accordance with various rules, acts, and guidelines prescribed by the State Government. We provide professional guidance and technical assistance to commercial establishments and organizations for compliance with the Maharashtra Fire Prevention and Life Safety Measures Act and applicable national fire safety standards.
+            </p>
+
+            <p style="font-size: 1.05rem; color: var(--color-text); line-height: 1.8; margin-bottom: 20px;">
+              Our services include Fire Audits, Fire Safety Training, Mock Drills, Emergency Evacuation Training, Inspection and Maintenance of Fire Extinguishers and Fire-Fighting Equipment, Installation of Fire Alarm and Fire-Fighting Systems, as well as guidance required for fire safety certification and compliance.
+            </p>
+
+            <p style="font-size: 1.05rem; color: var(--color-text); line-height: 1.8; margin-bottom: 20px;">
+              Our aim is to provide the best possible fire safety solutions according to the specific requirements of every client. We believe that effective fire safety is not only about having fire-fighting equipment, but also about creating awareness, preparedness, and a culture of safety.
+            </p>
+
+            <div class="card" style="padding: 25px; border-left: 5px solid var(--color-primary); margin: 25px 0; background: rgba(245, 245, 245, 0.9); backdrop-filter: blur(2px);">
+              <p style="font-size: 1.1rem; color: var(--color-secondary); line-height: 1.8; margin: 0;">
+                The primary objective of Maharashtra Fire Control is <strong>“Protection of Life and Property.”</strong> We are committed to creating awareness about fire safety, utilizing modern technology to develop safer environments, and encouraging every organization and citizen to understand the importance of fire prevention and safety.
+              </p>
+            </div>
+
+            <p style="font-size: 1.05rem; color: var(--color-text); line-height: 1.8; margin-bottom: 0;">
+              Through continuous awareness programs, professional training, technical guidance, and effective fire prevention measures, Maharashtra Fire Control strives to contribute towards building a safer, more aware, and fire-resilient Maharashtra.
+            </p>
+          </div>
 
         </div>
       </div>
     </section>
   `;
 }
+
 
 
 

@@ -1,4 +1,55 @@
 export function Certification() {
+  const pdfDocuments = [
+    { name: "AA270121137314R_RC28012021", file: "/assets/certification/AA270121137314R_RC28012021.pdf" },
+    { name: "Business Analyst_Certificate", file: "/assets/certification/Business Analyst_Certificate.pdf" },
+    { name: "Maharashtra CE Final", file: "/assets/certification/Maharashtra CE Final.pdf" },
+    { name: "Maharashtra fire 9001 Final", file: "/assets/certification/Maharashtra fire 9001 Final.pdf" },
+    { name: "fsai-certificate-Individual", file: "/assets/certification/fsai-certificate-Individual.pdf" }
+  ];
+
+  const imageCertificates = [
+    { name: "Certificate Document - Page 1", file: "/assets/certification/c1_wm.jpeg" },
+    { name: "Certificate Document - Page 2", file: "/assets/certification/c2_wm.jpeg" },
+    { name: "Certificate Document - Page 3", file: "/assets/certification/c3_wm.jpeg" }
+  ];
+
+  const docCardsHTML = pdfDocuments.map(doc => `
+    <div class="card animate-on-scroll slide-up" style="display: flex; flex-direction: column; justify-content: space-between; padding: 20px; border-radius: 12px; border-top: 3px solid var(--color-primary);">
+      <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+        <div style="background: rgba(211, 47, 47, 0.1); padding: 14px; border-radius: 10px; color: var(--color-primary); flex-shrink: 0;">
+          <i class="fas fa-file-pdf fa-2x"></i>
+        </div>
+        <div style="overflow: hidden;">
+          <h4 style="margin-bottom: 5px; font-size: 1.05rem; word-break: break-word; color: var(--color-secondary);">${doc.name}</h4>
+          <span style="font-size: 0.8rem; color: var(--color-text-light); font-weight: 500; text-transform: uppercase;">
+            PDF Compliance Document
+          </span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto;">
+        <a href="${doc.file}" target="_blank" class="btn btn-outline" style="padding: 7px 14px; font-size: 0.85rem; flex: 1; min-width: 100px; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+          <i class="fas fa-eye"></i> View PDF
+        </a>
+        <a href="${doc.file}" download="${doc.name}" class="btn btn-primary" style="padding: 7px 14px; font-size: 0.85rem; flex: 1; min-width: 100px; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+          <i class="fas fa-download"></i> Download
+        </a>
+      </div>
+    </div>
+  `).join('');
+
+  const imageCardsHTML = imageCertificates.map(cert => `
+    <div class="card gallery-item animate-on-scroll slide-up" style="padding: 0; overflow: hidden; border-radius: 12px; box-shadow: var(--shadow-sm);" onclick="openLightbox('${cert.file}')">
+      <div style="position: relative; height: 320px; background: #f8f9fa;">
+        <img src="${cert.file}" alt="${cert.name}" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+      </div>
+      <div style="padding: 12px 15px; background: white; text-align: center; border-top: 1px solid #eee;">
+        <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-secondary);">${cert.name}</span>
+      </div>
+    </div>
+  `).join('');
+
   return `
     <div class="hero-banner" style="background: var(--color-secondary); color: white; text-align: center;">
       <h1 class="hero-title" style="color: white; margin-bottom: 10px;">Certifications & Approvals</h1>
@@ -11,7 +62,7 @@ export function Certification() {
           Maharashtra Fire Control is a trusted and officially registered entity. We maintain the highest standards of safety and strictly adhere to government guidelines and regulations.
         </p>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 50px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 60px;">
           
           <div class="card text-center" style="border-top: 4px solid var(--color-primary);">
             <i class="fas fa-certificate fa-4x text-primary" style="margin-bottom: 20px;"></i>
@@ -29,41 +80,41 @@ export function Certification() {
 
         </div>
 
-        <h2 class="section-title">Compliance Documents</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-          
-          <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 15px;">
-            <div style="background: var(--color-bg); padding: 15px; border-radius: 8px;">
-              <i class="fas fa-file-pdf fa-2x text-primary"></i>
-            </div>
-            <div>
-              <h4 style="margin-bottom: 5px;">Registration Certificate</h4>
-              <button class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">View Document</button>
-            </div>
-          </div>
-
-          <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 15px;">
-            <div style="background: var(--color-bg); padding: 15px; border-radius: 8px;">
-              <i class="fas fa-file-pdf fa-2x text-primary"></i>
-            </div>
-            <div>
-              <h4 style="margin-bottom: 5px;">FSAI Membership ID</h4>
-              <button class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">View Document</button>
-            </div>
-          </div>
-
-          <div class="card" style="display: flex; align-items: center; gap: 15px; padding: 15px;">
-            <div style="background: var(--color-bg); padding: 15px; border-radius: 8px;">
-              <i class="fas fa-file-pdf fa-2x text-primary"></i>
-            </div>
-            <div>
-              <h4 style="margin-bottom: 5px;">Quality ISO Certificate</h4>
-              <button class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">View Document</button>
-            </div>
-          </div>
-
+        <!-- Compliance PDF Documents Section -->
+        <h2 class="section-title" style="margin-bottom: 40px;">Compliance Documents</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px;">
+          ${docCardsHTML}
         </div>
+
+        <!-- Official Certificate Images Section (Below Documents) -->
+        <div class="animate-on-scroll slide-up" style="margin-top: 50px;">
+          <div style="text-align: center; margin-bottom: 35px;">
+            <span style="background: rgba(211, 47, 47, 0.1); color: var(--color-primary); padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; display: inline-block;">
+              Official Approvals
+            </span>
+            <h2 style="font-size: 2.2rem; color: var(--color-secondary); margin-bottom: 8px;">
+              Certificate & Registration Scans
+            </h2>
+            <p style="color: var(--color-text-light); font-size: 0.95rem;">
+              Watermarked official certificate scans. Click any certificate image to view in full resolution.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
+            ${imageCardsHTML}
+          </div>
+        </div>
+
       </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
   `;
 }
+
+

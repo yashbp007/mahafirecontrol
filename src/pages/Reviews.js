@@ -6,7 +6,8 @@ export function Reviews() {
     { name: "Client Feedback & Review - 4", file: "/assets/reviews/r4_wm.jpeg" },
     { name: "Client Feedback & Review - 5", file: "/assets/reviews/r5_wm.jpeg" },
     { name: "Client Feedback & Review - 6", file: "/assets/reviews/r6_wm.jpeg" },
-    { name: "Client Feedback & Review - 7", file: "/assets/reviews/r7_wm.jpeg" }
+    { name: "Client Feedback & Review - 7", file: "/assets/reviews/r7_wm.jpeg" },
+    { name: "Client Feedback & Review - 8", file: "/assets/reviews/r8_wm.jpeg" }
   ];
 
   const reviewImageCardsHTML = reviewImages.map((cert, index) => `
@@ -107,25 +108,6 @@ export function Reviews() {
             </p>
           </div>
 
-          <!-- PDF Review Document Card -->
-          <div style="max-width: 600px; margin: 0 auto 40px;">
-            <div class="card animate-on-scroll slide-up" style="display: flex; flex-direction: column; justify-content: space-between; padding: 20px; border-radius: 12px; border-top: 4px solid var(--color-primary); background: #fdfdfd;">
-              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                <div style="background: rgba(211, 47, 47, 0.1); padding: 14px; border-radius: 10px; color: var(--color-primary); flex-shrink: 0;">
-                  <i class="fas fa-file-pdf fa-2x"></i>
-                </div>
-                <div>
-                  <h4 style="margin-bottom: 4px; font-size: 1.1rem; color: var(--color-secondary);">Client Review & Compliance Document (rd1)</h4>
-                  <span style="font-size: 0.8rem; color: var(--color-text-light); font-weight: 500; text-transform: uppercase;">
-                    Official PDF Document
-                  </span>
-                </div>
-              </div>
-              <button onclick="openPdfModal('/assets/reviews/rd1.pdf', 'Client Review Document (rd1)')" class="btn btn-primary" style="width: 100%; padding: 11px 14px; font-size: 0.95rem; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 8px; border: none; cursor: pointer;">
-                <i class="fas fa-eye"></i> View PDF Document
-              </button>
-            </div>
-          </div>
 
           <!-- Review Images Grid -->
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">

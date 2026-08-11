@@ -1,4 +1,29 @@
 export function Reviews() {
+  const reviewImages = [
+    { name: "Client Feedback & Review - 1", file: "/assets/reviews/r1_wm.jpeg" },
+    { name: "Client Feedback & Review - 2", file: "/assets/reviews/r2_wm.jpeg" },
+    { name: "Client Feedback & Review - 3", file: "/assets/reviews/r3_wm.jpeg" },
+    { name: "Client Feedback & Review - 4", file: "/assets/reviews/r4_wm.jpeg" },
+    { name: "Client Feedback & Review - 5", file: "/assets/reviews/r5_wm.jpeg" },
+    { name: "Client Feedback & Review - 6", file: "/assets/reviews/r6_wm.jpeg" },
+    { name: "Client Feedback & Review - 7", file: "/assets/reviews/r7_wm.jpeg" }
+  ];
+
+  const reviewImageCardsHTML = reviewImages.map((cert, index) => `
+    <div class="card gallery-item animate-on-scroll slide-up" style="padding: 0; overflow: hidden; border-radius: 12px; box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openLightbox('${cert.file}')">
+      <div style="position: relative; height: 320px; background: #f8f9fa;">
+        <img src="${cert.file}" alt="${cert.name}" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+        <span style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 3px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; backdrop-filter: blur(4px);">
+          Review ${index + 1}
+        </span>
+      </div>
+      <div style="padding: 12px 15px; background: white; text-align: center; border-top: 1px solid #eee;">
+        <span style="font-size: 0.9rem; font-weight: 600; color: var(--color-secondary);">${cert.name}</span>
+      </div>
+    </div>
+  `).join('');
+
   return `
     <div class="hero-banner" style="background: var(--color-secondary); color: white; text-align: center;">
       <h1 class="hero-title" style="color: white; margin-bottom: 10px;">Happy Customers</h1>
@@ -68,7 +93,48 @@ export function Reviews() {
 
         </div>
 
-        <div class="card animate-on-scroll slide-up" style="max-width: 700px; margin: 50px auto 0; padding: 35px; border-radius: 16px; border-top: 4px solid var(--color-accent);">
+        <!-- Review Documents & PDF Section -->
+        <div class="animate-on-scroll slide-up" style="margin-top: 60px;">
+          <div style="text-align: center; margin-bottom: 35px;">
+            <span style="background: rgba(211, 47, 47, 0.1); color: var(--color-primary); padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; display: inline-block;">
+              Client Verification
+            </span>
+            <h2 style="font-size: 2.2rem; color: var(--color-secondary); margin-bottom: 8px;">
+              Client Reviews & Feedback Documents
+            </h2>
+            <p style="color: var(--color-text-light); font-size: 0.95rem;">
+              Watermarked client feedback documents and work certificates. Click any image to enlarge.
+            </p>
+          </div>
+
+          <!-- PDF Review Document Card -->
+          <div style="max-width: 600px; margin: 0 auto 40px;">
+            <div class="card animate-on-scroll slide-up" style="display: flex; flex-direction: column; justify-content: space-between; padding: 20px; border-radius: 12px; border-top: 4px solid var(--color-primary); background: #fdfdfd;">
+              <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                <div style="background: rgba(211, 47, 47, 0.1); padding: 14px; border-radius: 10px; color: var(--color-primary); flex-shrink: 0;">
+                  <i class="fas fa-file-pdf fa-2x"></i>
+                </div>
+                <div>
+                  <h4 style="margin-bottom: 4px; font-size: 1.1rem; color: var(--color-secondary);">Client Review & Compliance Document (rd1)</h4>
+                  <span style="font-size: 0.8rem; color: var(--color-text-light); font-weight: 500; text-transform: uppercase;">
+                    Official PDF Document
+                  </span>
+                </div>
+              </div>
+              <button onclick="openPdfModal('/assets/reviews/rd1.pdf', 'Client Review Document (rd1)')" class="btn btn-primary" style="width: 100%; padding: 11px 14px; font-size: 0.95rem; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 8px; border: none; cursor: pointer;">
+                <i class="fas fa-eye"></i> View PDF Document
+              </button>
+            </div>
+          </div>
+
+          <!-- Review Images Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
+            ${reviewImageCardsHTML}
+          </div>
+        </div>
+
+        <!-- Submit Review Form -->
+        <div class="card animate-on-scroll slide-up" style="max-width: 700px; margin: 60px auto 0; padding: 35px; border-radius: 16px; border-top: 4px solid var(--color-accent);">
           <h3 style="margin-bottom: 8px; text-align: center; color: var(--color-secondary); font-size: 1.8rem;">Share Your Experience</h3>
           <p style="text-align: center; color: var(--color-text-light); margin-bottom: 30px;">We value your feedback! Submit your review directly to us on WhatsApp.</p>
           
@@ -108,5 +174,25 @@ export function Reviews() {
 
       </div>
     </section>
+
+    <!-- Protected PDF Viewer Modal (View Only, Toolbar Disabled) -->
+    <div id="pdf-modal" class="pdf-modal" onclick="if(event.target === this) closePdfModal()">
+      <div class="pdf-modal-container">
+        <div class="pdf-modal-header">
+          <h4 id="pdf-modal-title"><i class="fas fa-file-pdf text-primary"></i> Document Preview</h4>
+          <span class="pdf-modal-close" onclick="closePdfModal()">&times;</span>
+        </div>
+        <div class="pdf-modal-body" oncontextmenu="return false;">
+          <iframe id="pdf-frame" src="" title="Document Viewer"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="close-lightbox">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
   `;
 }
+

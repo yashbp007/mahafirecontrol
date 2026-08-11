@@ -4,7 +4,8 @@ export function Certification() {
     { name: "Business Analyst_Certificate", file: "/assets/certification/Business Analyst_Certificate.pdf" },
     { name: "Maharashtra CE Final", file: "/assets/certification/Maharashtra CE Final.pdf" },
     { name: "Maharashtra fire 9001 Final", file: "/assets/certification/Maharashtra fire 9001 Final.pdf" },
-    { name: "fsai-certificate-Individual", file: "/assets/certification/fsai-certificate-Individual.pdf" }
+    { name: "fsai-certificate-Individual", file: "/assets/certification/fsai-certificate-Individual.pdf" },
+    { name: "Client Review & Compliance (rd1)", file: "/assets/certification/rd1.pdf" }
   ];
 
   const imageCertificates = [

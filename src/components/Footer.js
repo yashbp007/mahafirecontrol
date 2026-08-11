@@ -26,6 +26,7 @@ export function renderFooter() {
             <li><i class="fas fa-phone-alt" style="margin-right: 8px;"></i> 9220242555, 8655416716</li>
             <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> maharashtra.fire.control@gmail.com</li>
             <li><i class="fab fa-facebook-f" style="margin-right: 8px; color: #1877F2;"></i> <a href="https://www.facebook.com/share/1971WzxY5G/" target="_blank" rel="noopener noreferrer" style="color: #1877F2; font-weight: 500;">Facebook Page</a></li>
+            <li><i class="fab fa-instagram" style="margin-right: 8px; color: #E1306C;"></i> <a href="https://www.instagram.com/mahafirecontrol__1987/" target="_blank" rel="noopener noreferrer" style="color: #E1306C; font-weight: 500;">Instagram</a></li>
           </ul>
         </div>
         

@@ -95,6 +95,20 @@ export function Contact() {
             </div>
 
             <div style="margin-bottom: 25px; display: flex; align-items: flex-start;">
+              <div style="width: 45px; height: 45px; background: linear-gradient(135deg, rgba(225,48,108,0.15), rgba(131,58,180,0.15)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: #E1306C; flex-shrink: 0; font-size: 1.2rem;">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Instagram</h4>
+                <p style="color: var(--color-text-light); line-height: 1.6;">
+                  <a href="https://www.instagram.com/mahafirecontrol__1987/" target="_blank" rel="noopener noreferrer" style="color: #E1306C; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                    Follow us on Instagram <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 25px; display: flex; align-items: flex-start;">
               <div style="width: 45px; height: 45px; background-color: rgba(255,193,7,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: var(--color-accent); flex-shrink: 0; font-size: 1.2rem;">
                 <i class="fas fa-map-marked-alt"></i>
               </div>

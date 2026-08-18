@@ -310,17 +310,6 @@ export function Products() {
           <p class="prod-cat-sub">${cat.subtitle}</p>
           <span class="prod-cat-std"><i class="fas fa-certificate"></i> Standard: ${cat.standard}</span>
         </div>
-        <button class="prod-cat-img-btn" onclick="document.getElementById('cat-img-${cat.id}').classList.toggle('active')">
-          <i class="fas fa-image"></i> View Catalogue Page
-        </button>
-      </div>
-
-      <!-- Catalogue image lightbox -->
-      <div id="cat-img-${cat.id}" class="prod-cat-img-panel" onclick="this.classList.remove('active')">
-        <div class="prod-cat-img-inner" onclick="event.stopPropagation()">
-          <button class="prod-cat-img-close" onclick="document.getElementById('cat-img-${cat.id}').classList.remove('active')"><i class="fas fa-times"></i></button>
-          <img src="${cat.image}" alt="${cat.title} catalogue" style="max-width:100%; max-height:85vh; border-radius:10px; display:block; margin:0 auto;">
-        </div>
       </div>
 
       <div class="prod-cards-grid">

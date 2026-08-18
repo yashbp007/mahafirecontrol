@@ -14,45 +14,8 @@ export function GovtGR() {
 
         <div style="max-width: 850px; margin: 0 auto;">
           
-          <!-- Latest GR Card -->
-          <div class="card animate-on-scroll slide-up" style="padding: 30px; border-top: 4px solid var(--color-primary); box-shadow: var(--shadow-md);">
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 20px;">
-              <div>
-                <span style="background: var(--color-primary); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 12px; display: inline-block; letter-spacing: 0.5px;">OFFICIAL NOTIFICATION</span>
-                <h2 style="font-size: 1.8rem; color: var(--color-secondary); margin-bottom: 8px;">Latest GR</h2>
-                <p style="color: var(--color-text-light); font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
-                  <i class="fas fa-file-pdf text-primary" style="font-size: 1.1rem;"></i> 
-                  Government Resolution (GR) on Fire Safety Regulations & Directives
-                </p>
-              </div>
-
-              <div style="display: flex; flex-wrap: wrap; gap: 12px;">
-                <button onclick="openPdfModal('/assets/Latest_GR.pdf', 'Latest Government Resolution (GR)')" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer;">
-                  <i class="fas fa-eye"></i> View Official GR
-                </button>
-              </div>
-            </div>
-
-            <div style="background: var(--color-bg); border-radius: 8px; padding: 20px; border: 1px dashed #ccc;">
-              <h4 style="margin-bottom: 10px; font-size: 1rem; color: var(--color-secondary);"><i class="fas fa-info-circle text-primary" style="margin-right: 6px;"></i> Document Summary:</h4>
-              <p style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.6; margin: 0;">
-                Official Government Notification in Marathi regarding mandatory fire prevention protocols, inspection guidelines, safety measure compliance, and life safety rules across Maharashtra.
-              </p>
-            </div>
-          </div>
-
-          <!-- Embedded PDF Viewer Preview Section -->
-          <div class="animate-on-scroll slide-up stagger-1" style="margin-top: 40px; text-align: center;">
-            <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--color-secondary); display: flex; align-items: center; justify-content: center; gap: 10px;">
-              <i class="fas fa-file-pdf text-primary"></i> Official Document PDF Preview
-            </h3>
-            <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid #ddd; background: #525659; height: 600px; width: 100%;" oncontextmenu="return false;">
-              <iframe src="/assets/Latest_GR.pdf#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="100%" style="border: none;"></iframe>
-            </div>
-          </div>
-
-          <!-- GR Document Pages & Circular Notices Section -->
-          <div class="animate-on-scroll slide-up stagger-2" style="margin-top: 60px;">
+          <!-- GR Document Pages & Circular Notices Section (First) -->
+          <div class="animate-on-scroll slide-up" style="margin-bottom: 50px;">
             <div style="text-align: center; margin-bottom: 35px;">
               <span style="background: rgba(211, 47, 47, 0.1); color: var(--color-primary); padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; display: inline-block;">
                 Official Circular Pages
@@ -152,6 +115,43 @@ export function GovtGR() {
                 </div>
               </div>
 
+            </div>
+          </div>
+
+          <!-- Latest GR Card (Second) -->
+          <div class="card animate-on-scroll slide-up" style="padding: 30px; border-top: 4px solid var(--color-primary); box-shadow: var(--shadow-md);">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 20px;">
+              <div>
+                <span style="background: var(--color-primary); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 12px; display: inline-block; letter-spacing: 0.5px;">OFFICIAL NOTIFICATION</span>
+                <h2 style="font-size: 1.8rem; color: var(--color-secondary); margin-bottom: 8px;">Latest GR</h2>
+                <p style="color: var(--color-text-light); font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                  <i class="fas fa-file-pdf text-primary" style="font-size: 1.1rem;"></i> 
+                  Government Resolution (GR) on Fire Safety Regulations & Directives
+                </p>
+              </div>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                <button onclick="openPdfModal('/assets/Latest_GR.pdf', 'Latest Government Resolution (GR)')" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer;">
+                  <i class="fas fa-eye"></i> View Official GR
+                </button>
+              </div>
+            </div>
+
+            <div style="background: var(--color-bg); border-radius: 8px; padding: 20px; border: 1px dashed #ccc;">
+              <h4 style="margin-bottom: 10px; font-size: 1rem; color: var(--color-secondary);"><i class="fas fa-info-circle text-primary" style="margin-right: 6px;"></i> Document Summary:</h4>
+              <p style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.6; margin: 0;">
+                Official Government Notification in Marathi regarding mandatory fire prevention protocols, inspection guidelines, safety measure compliance, and life safety rules across Maharashtra.
+              </p>
+            </div>
+          </div>
+
+          <!-- Embedded PDF Viewer Preview Section (Third) -->
+          <div class="animate-on-scroll slide-up stagger-1" style="margin-top: 40px; text-align: center;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--color-secondary); display: flex; align-items: center; justify-content: center; gap: 10px;">
+              <i class="fas fa-file-pdf text-primary"></i> Official Document PDF Preview
+            </h3>
+            <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid #ddd; background: #525659; height: 600px; width: 100%;" oncontextmenu="return false;">
+              <iframe src="/assets/Latest_GR.pdf#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="100%" style="border: none;"></iframe>
             </div>
           </div>
 

@@ -3,12 +3,6 @@ export function renderFooter() {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h3>Maharashtra Fire Control</h3>
-          <p>Reliable Fire Safety Solutions in Nashik. We provide fire safety products, equipment, maintenance, and compliance support.</p>
-          <p><strong>Tagline:</strong> Safety First</p>
-        </div>
-        
-        <div class="footer-col">
           <h3>Quick Links</h3>
           <ul>
             <li><a href="#/">Home</a></li>

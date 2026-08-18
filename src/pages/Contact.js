@@ -3,37 +3,38 @@ export function Contact() {
     {
       city: "Mumbai",
       address: "A/1, Anand Nagar, V.N. Purav Marg, Chembur - 400071",
-      phones: ["8379831243", "9220242555"]
+      phones: ["8379831243", "9220242555"],
+      isHQ: true
     },
     {
       city: "Nashik",
       address: "148/2 Sathe Mala, Vinchur Gavli, Nashik - 422003",
-      phones: ["9284294525"]
+      phones: ["9284294525", "9220242555"]
     },
     {
       city: "Parali Vaijnath",
       address: "Shop No. 2, Kendre Complex, TPS Road, Etke Corner, Parali Vaijnath - 431515",
-      phones: ["8010796242"]
+      phones: ["8010796242", "9220242555"]
     },
     {
       city: "Chh. Sambhaji Nagar",
       address: "Gut 3, Near Khandoba Mandir, Satara Parisar, Chh. Sambhaji Nagar - 431010",
-      phones: ["7666250930"]
+      phones: ["7666250930", "9220242555"]
     },
     {
       city: "Washim",
       address: "Dream Land City, Near Bajad Hospital, Mantri Park, Sai Mandir, Washim - 444505",
-      phones: ["8788149045"]
+      phones: ["8788149045", "9220242555"]
     },
     {
       city: "Hingoli",
       address: "Municipal 3/67, Railway Station Road, Hingoli - 431513",
-      phones: ["9075702808"]
+      phones: ["9075702808", "9220242555"]
     },
     {
       city: "Ahilyanagar",
       address: "Shop No. 07, Bolhegaon Fata, Savedi, Ahilyanagar - 414003",
-      phones: ["7447620293"]
+      phones: ["7447620293", "9220242555"]
     }
   ];
 
@@ -65,7 +66,7 @@ export function Contact() {
                   <h3 style="font-size: 1.3rem; color: var(--color-secondary); font-weight: 700; margin: 0;">
                     <i class="fas fa-map-marker-alt text-primary" style="margin-right: 8px;"></i>${b.city}
                   </h3>
-                  <span style="background: rgba(211,47,47,0.08); color: var(--color-primary); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">Branch</span>
+                  <span style="background: ${b.isHQ ? 'rgba(211,47,47,0.12)' : 'rgba(211,47,47,0.08)'}; color: var(--color-primary); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">${b.isHQ ? 'Headquarters' : 'Branch'}</span>
                 </div>
                 <p style="color: var(--color-text-light); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
                   ${b.address}
@@ -73,6 +74,15 @@ export function Contact() {
               </div>
 
               <div style="border-top: 1px solid #eee; padding-top: 15px; margin-top: 10px;">
+                <div style="font-size: 0.85rem; color: var(--color-text-light); font-weight: 600; margin-bottom: 8px;">
+                  <i class="fas fa-envelope text-accent" style="margin-right: 6px;"></i>Email Address:
+                </div>
+                <div style="margin-bottom: 12px;">
+                  <a href="mailto:maharashtra.fire.control@gmail.com" style="display: inline-flex; align-items: center; gap: 6px; background: #f4f6f9; color: var(--color-secondary); padding: 6px 12px; border-radius: 6px; font-weight: 600; font-size: 0.9rem; text-decoration: none; word-break: break-all;">
+                    <i class="fas fa-envelope" style="font-size: 0.8rem; color: var(--color-primary);"></i> maharashtra.fire.control@gmail.com
+                  </a>
+                </div>
+
                 <div style="font-size: 0.85rem; color: var(--color-text-light); font-weight: 600; margin-bottom: 8px;">
                   <i class="fas fa-phone-alt text-accent" style="margin-right: 6px;"></i>Contact Number(s):
                 </div>

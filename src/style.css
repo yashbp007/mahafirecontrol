@@ -709,7 +709,7 @@ footer {
 }
 
 /* Category Section */
-.prod-category-section { margin-bottom: 50px; }
+.prod-category-section { margin-bottom: 50px; scroll-margin-top: 110px; }
 .prod-cat-header {
   background: white; border-radius: 16px; padding: 22px 28px;
   margin-bottom: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.07);

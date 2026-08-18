@@ -323,7 +323,7 @@ export function Products() {
     <div class="prod-jump-nav">
       <span class="prod-jump-label"><i class="fas fa-filter"></i> Jump to:</span>
       <div class="prod-jump-links">
-        ${categories.map(c => `<a href="#${c.id}" class="prod-jump-link" style="--cat-color:${c.color};">${c.title}</a>`).join('')}
+        ${categories.map(c => `<a href="#${c.id}" onclick="event.preventDefault(); document.getElementById('${c.id}')?.scrollIntoView({ behavior: 'smooth' });" class="prod-jump-link" style="--cat-color:${c.color};">${c.title}</a>`).join('')}
       </div>
     </div>
   `;

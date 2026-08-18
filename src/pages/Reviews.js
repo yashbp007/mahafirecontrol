@@ -34,7 +34,28 @@ export function Reviews() {
     <section class="section-padding">
       <div class="container">
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 50px;">
+        <!-- Review Documents & PDF Section (First) -->
+        <div class="animate-on-scroll slide-up" style="margin-bottom: 60px;">
+          <div style="text-align: center; margin-bottom: 35px;">
+            <span style="background: rgba(211, 47, 47, 0.1); color: var(--color-primary); padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; display: inline-block;">
+              Client Verification
+            </span>
+            <h2 style="font-size: 2.2rem; color: var(--color-secondary); margin-bottom: 8px;">
+              Client Reviews & Feedback Documents
+            </h2>
+            <p style="color: var(--color-text-light); font-size: 0.95rem;">
+              Watermarked client feedback documents and work certificates. Click any image to enlarge.
+            </p>
+          </div>
+
+          <!-- Review Images Grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
+            ${reviewImageCardsHTML}
+          </div>
+        </div>
+
+        <!-- Grid of Textual Reviews (Second) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 60px;">
           
           <div class="card">
             <div style="color: var(--color-accent); font-size: 1.2rem; margin-bottom: 15px;">
@@ -94,29 +115,8 @@ export function Reviews() {
 
         </div>
 
-        <!-- Review Documents & PDF Section -->
-        <div class="animate-on-scroll slide-up" style="margin-top: 60px;">
-          <div style="text-align: center; margin-bottom: 35px;">
-            <span style="background: rgba(211, 47, 47, 0.1); color: var(--color-primary); padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; display: inline-block;">
-              Client Verification
-            </span>
-            <h2 style="font-size: 2.2rem; color: var(--color-secondary); margin-bottom: 8px;">
-              Client Reviews & Feedback Documents
-            </h2>
-            <p style="color: var(--color-text-light); font-size: 0.95rem;">
-              Watermarked client feedback documents and work certificates. Click any image to enlarge.
-            </p>
-          </div>
-
-
-          <!-- Review Images Grid -->
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
-            ${reviewImageCardsHTML}
-          </div>
-        </div>
-
-        <!-- Submit Review Form -->
-        <div class="card animate-on-scroll slide-up" style="max-width: 700px; margin: 60px auto 0; padding: 35px; border-radius: 16px; border-top: 4px solid var(--color-accent);">
+        <!-- Submit Review Form (Last) -->
+        <div class="card animate-on-scroll slide-up" style="max-width: 700px; margin: 0 auto; padding: 35px; border-radius: 16px; border-top: 4px solid var(--color-accent);">
           <h3 style="margin-bottom: 8px; text-align: center; color: var(--color-secondary); font-size: 1.8rem;">Share Your Experience</h3>
           <p style="text-align: center; color: var(--color-text-light); margin-bottom: 30px;">We value your feedback! Submit your review directly to us on WhatsApp.</p>
           

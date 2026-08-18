@@ -361,9 +361,10 @@ footer {
   }
   
   .nav-links.active {
-    max-height: 500px;
+    max-height: 85vh;
     padding: 20px 0;
     opacity: 1;
+    overflow-y: auto;
   }
 
   .nav-links li {

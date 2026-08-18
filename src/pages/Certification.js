@@ -2,7 +2,12 @@ export function Certification() {
   const imageCertificates = [
     { name: "Certificate Document - Page 1", file: "/assets/certification/c1_wm.jpeg" },
     { name: "Certificate Document - Page 2", file: "/assets/certification/c2_wm.jpeg" },
-    { name: "Certificate Document - Page 3", file: "/assets/certification/c3_wm.jpeg" }
+    { name: "Certificate Document - Page 3", file: "/assets/certification/c3_wm.jpeg" },
+    { name: "Certificate Document - Page 4", file: "/assets/certification/c4_wm.jpeg" },
+    { name: "Certificate Document - Page 5", file: "/assets/certification/c5_wm.jpeg" },
+    { name: "Certificate Document - Page 6", file: "/assets/certification/c6_wm.jpeg" },
+    { name: "Certificate Document - Page 7", file: "/assets/certification/c7_wm.jpeg" },
+    { name: "Certificate Document - Page 8", file: "/assets/certification/c8_wm.jpeg" }
   ];
 
   const imageCardsHTML = imageCertificates.map(cert => `
@@ -29,23 +34,6 @@ export function Certification() {
           Maharashtra Fire Control is a trusted and officially registered entity. We maintain the highest standards of safety and strictly adhere to government guidelines and regulations.
         </p>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 60px;">
-          
-          <div class="card text-center" style="border-top: 4px solid var(--color-primary);">
-            <i class="fas fa-certificate fa-4x text-primary" style="margin-bottom: 20px;"></i>
-            <h3 style="margin-bottom: 15px;">Government Registration</h3>
-            <p style="font-size: 1.2rem; margin-bottom: 15px;"><strong>Registration No:</strong> <span class="text-primary">MH18125813</span></p>
-            <p style="color: var(--color-text-light);">Officially registered to provide fire safety equipment, installation, and refilling services across Maharashtra.</p>
-          </div>
-
-          <div class="card text-center" style="border-top: 4px solid var(--color-accent);">
-            <i class="fas fa-shield-check fa-4x text-primary" style="margin-bottom: 20px;"></i>
-            <h3 style="margin-bottom: 15px;">FSAI Membership</h3>
-            <p style="font-size: 1.2rem; margin-bottom: 15px;"><strong>FSAI No:</strong> <span class="text-primary">ISK-1-0624-0271</span></p>
-            <p style="color: var(--color-text-light);">Proud members of the Fire & Security Association of India, committing to the best practices in the industry.</p>
-          </div>
-
-        </div>
 
         <!-- Official Certificate Images Section -->
         <div class="animate-on-scroll slide-up" style="margin-top: 20px;">

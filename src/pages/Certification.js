@@ -1,40 +1,9 @@
 export function Certification() {
-  const pdfDocuments = [
-    { name: "AA270121137314R_RC28012021", file: "/assets/certification/AA270121137314R_RC28012021.pdf" },
-    { name: "Business Analyst_Certificate", file: "/assets/certification/Business Analyst_Certificate.pdf" },
-    { name: "Maharashtra CE Final", file: "/assets/certification/Maharashtra CE Final.pdf" },
-    { name: "Maharashtra fire 9001 Final", file: "/assets/certification/Maharashtra fire 9001 Final.pdf" },
-    { name: "fsai-certificate-Individual", file: "/assets/certification/fsai-certificate-Individual.pdf" },
-    { name: "Client Review & Compliance (rd1)", file: "/assets/certification/rd1.pdf" }
-  ];
-
   const imageCertificates = [
     { name: "Certificate Document - Page 1", file: "/assets/certification/c1_wm.jpeg" },
     { name: "Certificate Document - Page 2", file: "/assets/certification/c2_wm.jpeg" },
     { name: "Certificate Document - Page 3", file: "/assets/certification/c3_wm.jpeg" }
   ];
-
-  const docCardsHTML = pdfDocuments.map(doc => `
-    <div class="card animate-on-scroll slide-up" style="display: flex; flex-direction: column; justify-content: space-between; padding: 20px; border-radius: 12px; border-top: 3px solid var(--color-primary);">
-      <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
-        <div style="background: rgba(211, 47, 47, 0.1); padding: 14px; border-radius: 10px; color: var(--color-primary); flex-shrink: 0;">
-          <i class="fas fa-file-pdf fa-2x"></i>
-        </div>
-        <div style="overflow: hidden;">
-          <h4 style="margin-bottom: 5px; font-size: 1.05rem; word-break: break-word; color: var(--color-secondary);">${doc.name}</h4>
-          <span style="font-size: 0.8rem; color: var(--color-text-light); font-weight: 500; text-transform: uppercase;">
-            PDF Compliance Document
-          </span>
-        </div>
-      </div>
-
-      <div style="margin-top: auto;">
-        <button onclick="openPdfModal('${doc.file}', '${doc.name}')" class="btn btn-primary" style="width: 100%; padding: 10px 14px; font-size: 0.9rem; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 8px; border: none; cursor: pointer;">
-          <i class="fas fa-eye"></i> View PDF Document
-        </button>
-      </div>
-    </div>
-  `).join('');
 
   const imageCardsHTML = imageCertificates.map(cert => `
     <div class="card gallery-item animate-on-scroll slide-up" style="padding: 0; overflow: hidden; border-radius: 12px; box-shadow: var(--shadow-sm);" onclick="openLightbox('${cert.file}')">
@@ -78,15 +47,8 @@ export function Certification() {
 
         </div>
 
-        <!-- Compliance PDF Documents Section -->
-        <h2 class="section-title" style="margin-bottom: 40px;">Compliance Documents</h2>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px;">
-          ${docCardsHTML}
-        </div>
-
-        <!-- Official Certificate Images Section (Below Documents) -->
-        <div class="animate-on-scroll slide-up" style="margin-top: 50px;">
+        <!-- Official Certificate Images Section -->
+        <div class="animate-on-scroll slide-up" style="margin-top: 20px;">
           <div style="text-align: center; margin-bottom: 35px;">
             <span style="background: rgba(211, 47, 47, 0.1); color: var(--color-primary); padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; display: inline-block;">
               Official Approvals
@@ -106,19 +68,6 @@ export function Certification() {
 
       </div>
     </section>
-
-    <!-- Protected PDF Viewer Modal (View Only, Toolbar Disabled) -->
-    <div id="pdf-modal" class="pdf-modal" onclick="if(event.target === this) closePdfModal()">
-      <div class="pdf-modal-container">
-        <div class="pdf-modal-header">
-          <h4 id="pdf-modal-title"><i class="fas fa-file-pdf text-primary"></i> Document Preview</h4>
-          <span class="pdf-modal-close" onclick="closePdfModal()">&times;</span>
-        </div>
-        <div class="pdf-modal-body" oncontextmenu="return false;">
-          <iframe id="pdf-frame" src="" title="Document Viewer"></iframe>
-        </div>
-      </div>
-    </div>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
